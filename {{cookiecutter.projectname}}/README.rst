@@ -38,7 +38,7 @@ Development
 
     make build
 
-5. Upload it (assumes you have setup the API key)::
+5. Upload it (assumes you have set up the API key)::
 
     make upload
 
