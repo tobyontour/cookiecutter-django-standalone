@@ -3,3 +3,4 @@
 *.swp
 *.orig
 **/__pycache__/**
+/test-tmp
