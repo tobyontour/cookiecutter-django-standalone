@@ -1,0 +1,8 @@
+{
+  "project_title": "Django App Title",
+  "projectname": "django-project-name",
+  "project_url": "https://github.com/janedoe/django-standalone-app",
+  "author": "Jane Doe",
+  "author_email": "jane.doe@example.com",
+  "pypiusername": "YOUR_USERNAME_HERE"
+}

@@ -1,0 +1,12 @@
+/venv
+.vscode
+.eggs
+*.egg-info
+*.swp
+*.pyc
+*.orig
+**/__pycache__/**
+/build
+/dist
+/htmlcov
+.coverage
