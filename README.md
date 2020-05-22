@@ -42,3 +42,29 @@ More docs!
 
 Just to be clear, the LICENSE file in this repo only applies to the cookiecutter. What
 you build with it is yours.
+
+## Development
+
+1. Checkout the repo.
+2. Make sure you have these installed:
+    * Cookiecutter
+    * python3
+3. Run the tests to make sure it's working:
+
+    make test
+
+## References
+
+Getting the testing system setup and running smoothly was the toughest part. You can
+create a whole Django environment or you can bootstrap just part of it. The latter seems
+like a better bet and what I've gone with.
+
+* https://packaging.python.org/tutorials/packaging-projects/
+* https://setuptools.readthedocs.io/en/latest/setuptools.html#test-build-package-and-run-a-unittest-suite
+* https://python-packaging.readthedocs.io/en/latest/testing.html
+* http://django-standalone-apps.com/part1/testing.html
+* https://docs.djangoproject.com/en/3.0/topics/testing/advanced/
+* https://docs.djangoproject.com/en/3.0/intro/reusable-apps/
+* https://www.ericholscher.com/blog/2009/jun/29/enable-setuppy-test-your-django-apps/
+* https://github.com/bzzzzzz/django-yandex-cash-register/blob/master/yandex_cash_register/tests/runtests.py
+* https://cookiecutter.readthedocs.io/en/latest/README.html
