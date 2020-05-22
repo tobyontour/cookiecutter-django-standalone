@@ -1,7 +1,10 @@
-test:
-	mkdir -p test-tmp
-	cd test-tmp && cookiecutter --no-input https://github.com/tobyontour/cookiecutter-django-standalone
-	cd test-tmp/django-project-name && make test
+TEST_DIR=test-tmp
+
+test: clean
+	mkdir -p $(TEST_DIR)
+	cd $(TEST_DIR) && cookiecutter --no-input https://github.com/tobyontour/cookiecutter-django-standalone
+	test -f $(TEST_DIR)/django-project-name/django-project-name/tests/templates/_base.html
+	cd $(TEST_DIR)/django-project-name && make test
 
 clean:
-	rm -rf test-tmp
+	rm -rf $(TEST_DIR)
