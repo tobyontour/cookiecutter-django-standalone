@@ -3,9 +3,11 @@ VIRTUAL_ENV_DIR=venv
 test:
 	python3 setup.py test
 
-coverage:
+virtualenv:
 	test ! -d $(VIRTUAL_ENV_DIR) && python3 -m venv $(VIRTUAL_ENV_DIR) || true
 	$(VIRTUAL_ENV_DIR)/bin/pip install -r requirements-dev.txt
+
+coverage: virtualenv
 	$(VIRTUAL_ENV_DIR)/bin/coverage run {{cookiecutter.projectname}}/tests/runtests.py
 	$(VIRTUAL_ENV_DIR)/bin/coverage html --omit="venv/*"
 
@@ -18,3 +20,6 @@ build:
 
 upload: build
 	python3 -m twine upload --repository testpypi dist/*
+
+migrate: virtualenv
+	$(VIRTUAL_ENV_DIR)/bin/python manage.py makemigrations
